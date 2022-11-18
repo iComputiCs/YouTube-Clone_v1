@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Main meta: -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="iComputiCs - YouTube Clone" />
+    <meta
+      name="keywords"
+      content="YouTube, YouTube clone, clone, for fun, video, video player"
+    />
+    <meta name="author" content="iComputiCs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon: -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <!-- Styles: -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- The Title: -->
+    <title>YouTube Clone - iComputiCs</title>
+    <!-- Open Graph Image  -->
+    <meta property="og:type" content="website">
+    <meta property="og:type" content="https://icomputics-youtube-clone-v1.netlify.app">
+    <meta property="og:image" content="ogi/ogi.jpg" />
+    <meta property="og:title" content="iComputiCs" />
+    <meta property="og:description" content="iComputiCs©" />
+    <!-- Google Fonts (Poppins): -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google icons: -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- DataBase: -->
+    <script src="./js/base.js"></script>
+  </head>
+  <body
+    oncontextmenu="makeAlert('ContextMenu feature is not supported for this project yet<br>(༎ຶ︿༎ຶ)'); return false;"
+  >
+    <div id="container">
+      <aside id="project-info" onclick="openProjectInfo()">
+        <section onclick="projectInfo.classList.remove('open');">
+          <div>
+            <img
+              style="cursor: pointer; height: 1em;"
+              class="icon"
+              src="./images/icons/close.svg"
+              alt=""
+              onclick="setTimeout(()=>{projectInfo.classList.remove('open');}, 100)"
+            />
+            <div>
+              <img
+                style="cursor: pointer"
+                src="./images/icons/logo.svg"
+                alt="youtube logo"
+              />
+              <h1>YouTube Clone</h1>
+            </div>
+          </div>
+          <div class="text-block">
+            <h3>Copyright</h3>
+            <p>
+              This project does not retain any copyright in relation to the
+              YouTube platform. Also, it is a scientific-practical, personal
+              portfolio project and should not be taken seriously.
+            </p>
+          </div>
+          <div class="text-block">
+            <h3>Authorship</h3>
+            <p>
+              This project is a product of practical experience of the
+              iComputiCs system, and it receives the authorship of the system as
+              an experimental project.
+            </p>
+          </div>
+          <div class="text-block">
+            <h3>Sources</h3>
+            <p>
+              All sources of the project are taken from the open sources of the
+              Internet and do not require authorship. Also, each source address
+              is provided by the "Source" button that appears at the bottom of
+              the videos.
+            </p>
+          </div>
+          <div class="text-block">
+            <h3>Terms of Use</h3>
+            <p>
+              The program code of the project is placed in the github system and
+              can be used as an open source resource for scientific research and
+              learning. As a user, copying this project in its entirety and
+              posting it on the network as an example of your own creation is
+              recognized and prosecuted as a violation of our system's
+              copyright.
+            </p>
+          </div>
+          <div class="text-block">
+            <h3>Theme</h3>
+            <p>
+              The colors for the project are specially selected and can be used
+              without authorship.
+            </p>
+          </div>
+          <div class="text-block">
+            <h3><a href=""> Source Code on Github&nbsp;&nbsp;&nbsp;&lt;/&gt; </a></h3>
+          </div>
+          <img src="./ogi/ogi.jpg" alt="iComputiCs" />
+          <div class="text-block right">
+            <h3>Keyboard shortcuts:</h3>
+            <p>
+              "Spacebar" - To Play and Pause the video
+            </p>
+            <p>
+              "n" - To skip to Next video
+            </p>
+            <p>
+              "p" - To go back to the Previous video
+            </p>
+            <p>
+              "Right Arrow" - To go 5 seconds forward
+            </p>
+            <p>
+              "Left Arrow" - To go 5 seconds backward
+            </p>
+            <p>
+              "m" - To Mute the video
+            </p>
+            <p>
+              "a" - To turn on/off Autoplay
+            </p>
+            <p>
+              "r" - To Refresh and randomize the order of the videos
+            </p>
+            <p>
+              "s" - To focus to the Search input
+            </p>
+            <p>
+              "c" - To focus to the Comment input
+            </p>
+            <p>
+              "f" - To make the video fullscreen, or to exit from that
+            </p>
+          </div>
+        </section>
+      </aside>
+      <span id="alert">This is an alert box!</span>
+      <header>
+        <div style="cursor: pointer">
+          <img
+            onclick="openProjectInfo()"
+            class="icon"
+            src="./images/icons/menu.svg"
+            alt=""
+          />
+          <img
+            style="cursor: pointer"
+            src="./images/icons/logo.svg"
+            alt="youtube logo"
+          />
+          <h1
+            onclick="refreshAll()"
+          >
+            YouTube Clone
+          </h1>
+        </div>
+        <div>
+          <div id="qidiruv">
+            <input type="search" placeholder="Search" id="search-text" />
+            <div onclick="searchFromYouTube()">
+              <img
+                class="icon"
+                src="./images/icons/search.svg"
+                alt="search button"
+              />
+            </div>
+            <div
+              style="cursor: pointer"
+              onclick="makeAlert('Searching with your voice technologies are not available for now<br>◉︵◉')"
+            >
+              <img class="icon" src="./images/icons/mic.svg" alt="mic" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            class="icon"
+            src="./images/icons/create.svg"
+            alt="create"
+            onclick="makeAlert('Creating and posting a new video is not gonna be available in this project<br>◉︵◉')"
+          />
+          <img
+            class="icon"
+            src="./images/icons/bell.svg"
+            alt="bell"
+            onclick="makeAlert('Bell is not gonna be available in this project<br>◉︵◉')"
+          />
+          <img
+            class="persona"
+            alt=""
+            onclick="makeAlert('This is a demo account, this project has no account system<br>◉︵◉')"
+            style="cursor: pointer"
+          />
+        </div>
+      </header>
+      <div id="content">
+        <div id="video">
+          <div id="video-block">
+            <div id="video-play-pause-animation" onclick="PlayPause()">
+              <img src="./images/icons/play.svg" />
+            </div>
+            <video id="video-tag" width="100%" onclick="PlayPause()"></video>
+            <div id="video-controls" class="show">
+              <div id="duration">
+                <div id="current-time-duration"></div>
+              </div>
+              <div id="controls">
+                <div>
+                  <img
+                    class="icon"
+                    src="./images/icons/previous.svg"
+                    alt="previous"
+                    onclick="previousVideo()"
+                  />
+                  <img
+                    class="icon"
+                    src="./images/icons/minus5.svg"
+                    alt="minus 5 seconds"
+                    id="minus5"
+                    onclick="minusPlus(-5)"
+                  />
+                  <img
+                    class="icon"
+                    src="./images/icons/play.svg"
+                    alt="play"
+                    id="play-pause-button"
+                    onclick="PlayPause()"
+                  />
+                  <img
+                    class="icon"
+                    src="./images/icons/plus5.svg"
+                    alt="plus 5 seconds"
+                    id="plus5"
+                    onclick="minusPlus(5)"
+                  />
+                  <img
+                    class="icon"
+                    src="./images/icons/next.svg"
+                    alt="next"
+                    onclick="nextVideo()"
+                  />
+                  <div id="vol-control-block">
+                    <img
+                      id="vol-control"
+                      class="icon"
+                      src="./images/icons/volume_up.svg"
+                      alt="vol-up icon"
+                      onclick="muteVideo()"
+                    />
+                    <div id="volume">
+                      <div id="volume-value"></div>
+                      <div id="volume-circle"></div>
+                    </div>
+                  </div>
+                  <div id="time">
+                    <div>00:00</div>
+                    <div>/</div>
+                    <div>00:00</div>
+                  </div>
+                </div>
+                <div>
+                  <div id="auto-play" onclick="autoPlayOnOff()">
+                    <img
+                      class="icon"
+                      src="./images/icons/pause-filled.svg"
+                      alt="pause filled"
+                    />
+                    <img
+                      class="icon"
+                      src="./images/icons/play-filled.svg"
+                      alt="play filled"
+                    />
+                  </div>
+                  <img
+                    src="./images/icons/subtitle.svg"
+                    alt="subtitle"
+                    class="icon"
+                    style="opacity: 0.6"
+                    onclick="makeAlert('Subtitles are not gonna be added to this version<br>◉︵◉')"
+                  />
+                  <img
+                    src="./images/icons/settings.svg"
+                    alt="settings"
+                    class="icon"
+                    onclick="
+                    makeAlert('No additional setings are available<br>◉︵◉');
+                    counter++;
+                    this.style.transform = `rotate(${counter * 60}deg)`;"
+                  />
+                  <img
+                    src="./images/icons/fullscreen.svg"
+                    alt="fullscreen"
+                    class="icon"
+                    id="fullscreen"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="info">
+            <h1 id="v-name"></h1>
+            <div id="u-control">
+              <div>
+                <img
+                  id="channel-image"
+                  onclick='makeAlert(`Search "${base[videoIndex].channel} channel" from real YouTube<br>乁(⌐■v■)ㄏ`)'
+                  ondblclick='window.open(
+                    "https://www.youtube.com/results?search_query=" + base[videoIndex].channel,
+                    "_blank"
+                  );'
+                />
+                <div>
+                  <h2
+                    id="channel"
+                    onclick='makeAlert(`Search "${base[videoIndex].channel} channel" from real YouTube<br>乁(⌐■v■)ㄏ`)'
+                    ondblclick='window.open(
+                      "https://www.youtube.com/results?search_query=" + base[videoIndex].channel + " channel",
+                      "_blank"
+                    );'
+                  >
+                    Channel name
+                  </h2>
+                  <h2 id="subs">subscribers</h2>
+                </div>
+                <button id="subscribe" onclick="onSubscribe()">
+                  Subscribe
+                </button>
+              </div>
+              <div>
+                <div>
+                  <button onclick="likeDislike(1)">
+                    <img id="like" src="./images/icons/like.svg" alt="like" />
+                    <h3 id="like-number"></h3>
+                  </button>
+                  <button onclick="likeDislike(0)">
+                    <img
+                      id="dislike"
+                      src="./images/icons/dislike.svg"
+                      alt="dislike"
+                    />
+                  </button>
+                </div>
+                <a>
+                  <button onclick="shareProject()">
+                    <img src="./images/icons/share.svg" alt="share" />
+                    <h2>Share</h2>
+                  </button>
+                </a>
+                <a id="source" target="_blank">
+                  <button>
+                    <img src="./images/icons/box.svg" alt="source" />
+                    <h2>Source</h2>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div id="description">
+              <p>
+                <span id="view-count"></span>
+                <span id="date-count"></span>
+              </p>
+              <p id="info-text"></p>
+            </div>
+            <div id="comments">
+              <h1 id="comment-count"></h1>
+              <form name="comment" onsubmit="return false" method="post">
+                <img
+                  class="persona"
+                  alt="me"
+                />
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Add a comment"
+                    id="comment-text"
+                  />
+                  <div>
+                    <button type="reset">Clear</button>
+                    <button type="button" onclick="commentForm()">
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div id="comment-list"></div>
+            </div>
+          </div>
+        </div>
+        <div id="video-list"></div>
+      </div>
+    </div>
+    <!-- Main Controls: -->
+    <script src="./js/main.js"></script>
+    <!-- Keyboar shortcuts: -->
+    <script src="./js/keys.js"></script>
+  </body>
+</html>
